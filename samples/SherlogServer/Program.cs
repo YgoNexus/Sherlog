@@ -1,8 +1,8 @@
-﻿// Use TCPeasy.Cli https://github.com/sschmid/TCPeasy
-TCPeasy.Cli.Program.Main(args);
+// Use TCPeasy.Cli https://github.com/sschmid/TCPeasy
+//TCPeasy.Cli.Program.Main(args);
 
 // Manual setup using TCPeasy
-/*
+
 // Setup Sherlog
 Logger.GlobalLogLevel = LogLevel.Info;
 Logger.AddAppender((logger, logLevel, message) => Console.WriteLine(message));
@@ -21,4 +21,7 @@ server.Listen(12345);
 Console.CancelKeyPress += delegate { server.Disconnect(); };
 
 while (true) Console.ReadLine();
-*/
+
+// output 2 single exe
+// right click this csproj file then open terminal input command below
+// dotnet publish SherlogServer.csproj -c Release -r win-x64 --self-contained
