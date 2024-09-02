@@ -25,3 +25,7 @@ while (true) Console.ReadLine();
 // output 2 single exe
 // right click this csproj file then open terminal input command below
 // dotnet publish SherlogServer.csproj -c Release -r win-x64 --self-contained
+
+// download link below for colorful font supportted console. Highly recommended !
+//https://github.com/microsoft/terminal
+// open singlefile exe at above console. Colorful font would be work
