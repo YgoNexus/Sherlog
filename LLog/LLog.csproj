@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\src\Sherlog.Appenders\Sherlog.Appenders.csproj" />
+        <ProjectReference Include="..\src\Sherlog.Formatters\Sherlog.Formatters.csproj" />
+        <ProjectReference Include="..\src\Sherlog\Sherlog.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="UnityEngine">
+            <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>

@@ -1,14 +1,12 @@
-namespace Sherlog
+
+public enum LogLevel
 {
-    public enum LogLevel
-    {
-        On,
-        Trace,
-        Debug,
-        Info,
-        Warn,
-        Error,
-        Fatal,
-        Off
-    }
+    On,
+    Trace,
+    Debug,
+    Info,
+    Warn,
+    Error,
+    Fatal,
+    Off
 }

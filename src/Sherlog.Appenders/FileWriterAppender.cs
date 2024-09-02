@@ -13,7 +13,11 @@ namespace Sherlog.Appenders
         {
             lock (_lock)
             {
-                using var writer = new StreamWriter(_filePath, true);
+                if (!File.Exists(_filePath))
+                {
+                    File.Create(_filePath).Dispose();
+                }
+                using StreamWriter writer = new StreamWriter(_filePath, true);
                 writer.WriteLine(message);
             }
         }
@@ -22,7 +26,7 @@ namespace Sherlog.Appenders
         {
             lock (_lock)
             {
-                using var writer = new StreamWriter(_filePath, false);
+                using StreamWriter writer = new StreamWriter(_filePath, false);
                 writer.Write(string.Empty);
             }
         }

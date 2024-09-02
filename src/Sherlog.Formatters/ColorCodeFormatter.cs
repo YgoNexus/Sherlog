@@ -22,6 +22,8 @@ namespace Sherlog.Formatters
         public const string YellowBackground = "43m";
         public const string BlueForeground = "34m";
         public const string BlueBackground = "44m";
+        public const string LightBlueFG = "94m";
+        public const string LightBlueBG = "104m";
         public const string MagentaForeground = "35m";
         public const string MagentaBackground = "45m";
         public const string CyanForeground = "36m";
@@ -38,7 +40,7 @@ namespace Sherlog.Formatters
         public readonly Dictionary<LogLevel, Color> Colors = new Dictionary<LogLevel, Color>
         {
             {LogLevel.Trace, new Color {Foreground = WhiteForeground,  Background = CyanBackground}},
-            {LogLevel.Debug, new Color {Foreground = BlueForeground,   Background = NoBackground}},
+            {LogLevel.Debug, new Color {Foreground = LightBlueFG,   Background = NoBackground}},
             {LogLevel.Info,  new Color {Foreground = GreenForeground,  Background = NoBackground}},
             {LogLevel.Warn,  new Color {Foreground = YellowForeground, Background = NoBackground}},
             {LogLevel.Error, new Color {Foreground = WhiteForeground,  Background = RedBackground}},

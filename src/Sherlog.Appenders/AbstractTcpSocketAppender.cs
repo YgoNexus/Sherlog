@@ -22,7 +22,7 @@ namespace Sherlog.Appenders
         {
             var server = new TcpServerSocket();
             _socket = server;
-            server.OnClientConnected += (_, _) => OnConnected();
+            server.OnClientConnected += (_, __) => OnConnected();
             server.Listen(port);
         }
 
