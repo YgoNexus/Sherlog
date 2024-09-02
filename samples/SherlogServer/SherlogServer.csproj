@@ -17,8 +17,4 @@
         <PackageReference Include="TCPeasy.Cli" Version="1.*" />
     </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="../../src/Sherlog.Formatters/Sherlog.Formatters.csproj" />
-    </ItemGroup>
-
 </Project>

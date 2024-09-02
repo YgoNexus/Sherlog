@@ -9,8 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Sherlog.Appenders/Sherlog.Appenders.csproj" />
-    <ProjectReference Include="../../src/Sherlog.Formatters/Sherlog.Formatters.csproj" />
     <ProjectReference Include="../../src/Sherlog/Sherlog.csproj" />
   </ItemGroup>
 

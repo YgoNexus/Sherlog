@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Sherlog.Formatters/Sherlog.Formatters.csproj" />
+    <ProjectReference Include="..\..\src\Sherlog\Sherlog.csproj" />
   </ItemGroup>
 
 </Project>
