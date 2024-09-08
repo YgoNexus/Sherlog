@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="../../src/Sherlog/Sherlog.csproj" />
+    <ProjectReference Include="..\..\src\Sherlog.Appenders\Sherlog.Appenders.csproj" />
+    <ProjectReference Include="..\..\src\Sherlog.Formatters\Sherlog.Formatters.csproj" />
   </ItemGroup>
 
 </Project>

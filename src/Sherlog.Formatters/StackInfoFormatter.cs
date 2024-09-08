@@ -8,9 +8,7 @@ namespace Sherlog.Formatters
 {
     public class StackInfoFormatter
     {
-        readonly Func<string> _timeDelegate;
-        readonly string _timeFormat;
-        readonly string _format;
+        private readonly string _format;
         public StackInfoFormatter(string format = null)
         {
             if (format == null)

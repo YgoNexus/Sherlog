@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>$(DefaultTestTargetFramework)</TargetFramework>
@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../../src/Sherlog/Sherlog.csproj" />
+    <ProjectReference Include="..\..\src\Sherlog.Formatters\Sherlog.Formatters.csproj" />
   </ItemGroup>
 
 </Project>

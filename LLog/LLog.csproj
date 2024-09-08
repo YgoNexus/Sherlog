@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFramework>$(DefaultTargetFramework)</TargetFramework>
         <DebugType>none</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\src\Sherlog.Appenders\Sherlog.Appenders.csproj" />
+        <ProjectReference Include="..\src\Sherlog.Formatters\Sherlog.Formatters.csproj" />
         <ProjectReference Include="..\src\Sherlog\Sherlog.csproj" />
     </ItemGroup>
 
