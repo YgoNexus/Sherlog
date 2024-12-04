@@ -1,16 +1,15 @@
 #define LLOG2TCP
 #define LLOG
 #define LLOG2FILE
+using Sherlog.Appenders;
+using Sherlog.Formatters;
 using System;
 using System.Diagnostics;
+using System.Net;
 using System.Text;
 using UnityEngine;
-
-using Object = UnityEngine.Object;
 using Logger = Sherlog.Logger;
-using Sherlog.Appenders;
-using System.Net;
-using Sherlog.Formatters;
+using Object = UnityEngine.Object;
 
 
 public static class LLog
@@ -103,8 +102,10 @@ public static class LLog
                 UnityEngine.Debug.Log(message, context);
             else if (logType <= LogLevel.Warn)
                 UnityEngine.Debug.LogWarning(message, context);
-            else
+            else if (logType<= LogLevel.Fatal)
                 UnityEngine.Debug.LogError(message, context);
+            if (logType == LogLevel.Fatal)
+                UnityEngine.Debug.Break();
             OnPrint?.Invoke(logType, message.ToString(), context);
         }
     }
@@ -140,6 +141,11 @@ public static class LLog
         Print(LogLevel.Error, message, obj);
     }
     [Conditional("LLOG")]
+    public static void Fatal(object message, Object obj = null)
+    {
+        Print(LogLevel.Fatal, message, obj);
+    }
+    [Conditional("LLOG")]
     public static void LogFormat(string format, params object[] args)
     {
         LogFormat(format, null, args);
@@ -168,6 +174,16 @@ public static class LLog
     public static void ErrorFormat(string format, Object contex, params object[] args)
     {
         PrintFormat(LogLevel.Error, format, contex, args);
+    }
+    [Conditional("LLOG")]
+    public static void FatalFormat(string format, params object[] args)
+    {
+        FatalFormat(format, null, args);
+    }
+    [Conditional("LLOG")]
+    public static void FatalFormat(string format, Object contex, params object[] args)
+    {
+        PrintFormat(LogLevel.Fatal, format, contex, args);
     }
 
     public static string GetUserSystemInfo()
