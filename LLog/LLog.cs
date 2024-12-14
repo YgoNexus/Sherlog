@@ -91,7 +91,7 @@ public static class LLog
 
     static bool CanPrint(LogLevel lv)
     {
-        return lv >= UnityLogThreshold;
+        return lv >= UnityLogThreshold && UnityEngine.Debug.isDebugBuild;
     }
     [Conditional("LLOG")]
     static void Print(LogLevel logType, object message, Object context = null)
@@ -102,7 +102,7 @@ public static class LLog
                 UnityEngine.Debug.Log(message, context);
             else if (logType <= LogLevel.Warn)
                 UnityEngine.Debug.LogWarning(message, context);
-            else if (logType<= LogLevel.Fatal)
+            else if (logType <= LogLevel.Fatal)
                 UnityEngine.Debug.LogError(message, context);
             if (logType == LogLevel.Fatal)
                 UnityEngine.Debug.Break();
